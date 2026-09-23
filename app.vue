@@ -30,7 +30,10 @@
 const { t } = useI18n()
 
 useHead({
-  titleTemplate: (chunk) => (chunk ? `${chunk} | Zurisky Aqsa Firmansyah` : t('site.title'))
+  titleTemplate: (chunk) => {
+    if (!chunk) return t('site.title')
+    return chunk.includes('Zurisky Aqsa') ? chunk : `${chunk} | Zurisky Aqsa Firmansyah`
+  }
 })
 
 const loading = ref(true)
