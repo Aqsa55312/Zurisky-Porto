@@ -65,7 +65,9 @@
   "experience": {
     "eyebrow": "04 · Career",
     "title": "Professional Experience",
-    "techAt": "Technologies at {company}"
+    "techAt": "Technologies at {company}",
+    "count": "{roles} roles across {companies} companies",
+    "current": "Current"
   },
   "education": {
     "eyebrow": "05 · Education",

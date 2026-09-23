@@ -65,7 +65,9 @@
   "experience": {
     "eyebrow": "04 · Karier",
     "title": "Pengalaman Profesional",
-    "techAt": "Teknologi di {company}"
+    "techAt": "Teknologi di {company}",
+    "count": "{roles} peran di {companies} perusahaan",
+    "current": "Aktif"
   },
   "education": {
     "eyebrow": "05 · Pendidikan",
