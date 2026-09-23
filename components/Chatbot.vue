@@ -21,7 +21,7 @@
     <Transition name="chat-pop">
       <section
         v-if="open"
-        class="fixed bottom-24 right-4 z-50 flex max-h-[68vh] w-[calc(100vw-2rem)] max-w-sm flex-col overflow-hidden rounded-3xl border border-white/50 bg-white/85 shadow-2xl backdrop-blur-xl sm:right-6 dark:border-white/10 dark:bg-neutral-900/85"
+        class="fixed bottom-24 left-3 right-3 z-50 flex h-[540px] max-h-[74dvh] flex-col overflow-hidden rounded-3xl border border-white/50 bg-white/85 shadow-2xl backdrop-blur-xl sm:left-auto sm:right-6 sm:w-[calc(100vw-2rem)] sm:max-w-sm dark:border-white/10 dark:bg-neutral-900/85"
         role="dialog"
         :aria-label="$t('chat.title')"
       >
@@ -67,12 +67,12 @@
         </div>
 
         <!-- Quick replies -->
-        <div v-if="!typing" class="flex gap-2 overflow-x-auto px-4 pb-2">
+        <div v-if="!typing" class="flex flex-wrap gap-2 px-4 pb-2">
           <button
             v-for="q in quickReplies"
             :key="q.en"
             type="button"
-            class="shrink-0 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-semibold text-indigo-700 transition-colors hover:bg-indigo-100 dark:border-indigo-500/30 dark:bg-indigo-500/10 dark:text-indigo-300 dark:hover:bg-indigo-500/20"
+            class="shrink-0 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-2 text-xs font-semibold text-indigo-700 transition-colors hover:bg-indigo-100 dark:border-indigo-500/30 dark:bg-indigo-500/10 dark:text-indigo-300 dark:hover:bg-indigo-500/20"
             @click="send(pick(q))"
           >
             {{ pick(q) }}
@@ -89,7 +89,7 @@
             type="text"
             :placeholder="$t('chat.placeholder')"
             autocomplete="off"
-            class="h-11 min-w-0 flex-1 rounded-xl border border-neutral-200 bg-white/70 px-3.5 text-sm outline-none transition-colors placeholder:text-neutral-400 focus:border-indigo-400 dark:border-white/10 dark:bg-white/5 dark:focus:border-indigo-500"
+            class="h-11 min-w-0 flex-1 rounded-xl border border-neutral-200 bg-white/70 px-3.5 text-base outline-none transition-colors placeholder:text-neutral-400 focus:border-indigo-400 sm:text-sm dark:border-white/10 dark:bg-white/5 dark:focus:border-indigo-500"
           >
           <button
             type="submit"
