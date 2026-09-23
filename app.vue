@@ -23,6 +23,7 @@
     </main>
     <Footer />
     <ScrollToTop />
+    <Chatbot />
   </div>
 </template>
 

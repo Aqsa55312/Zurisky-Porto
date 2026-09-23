@@ -128,5 +128,16 @@
     "wrong": "Something went wrong.",
     "wrongHint": "Please try again later.",
     "missingHint": "The page you are looking for does not exist."
+  },
+  "chat": {
+    "title": "Zurisky AI",
+    "subtitle": "Ask about skills, projects & more",
+    "online": "Online — replies instantly",
+    "openLabel": "Open chat with Zurisky AI",
+    "closeLabel": "Close chat",
+    "inputLabel": "Type your message",
+    "placeholder": "Ask something…",
+    "sendLabel": "Send message",
+    "typing": "Zurisky AI is typing"
   }
 }

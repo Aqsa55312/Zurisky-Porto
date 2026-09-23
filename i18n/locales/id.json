@@ -128,5 +128,16 @@
     "wrong": "Terjadi kesalahan.",
     "wrongHint": "Silakan coba lagi nanti.",
     "missingHint": "Halaman yang Anda cari tidak ada."
+  },
+  "chat": {
+    "title": "Zurisky AI",
+    "subtitle": "Tanya soal keahlian, proyek & lainnya",
+    "online": "Online — langsung dibalas",
+    "openLabel": "Buka chat dengan Zurisky AI",
+    "closeLabel": "Tutup chat",
+    "inputLabel": "Ketik pesan Anda",
+    "placeholder": "Tanya sesuatu…",
+    "sendLabel": "Kirim pesan",
+    "typing": "Zurisky AI sedang mengetik"
   }
 }

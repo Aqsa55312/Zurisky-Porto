@@ -4,7 +4,7 @@
       v-if="visible"
       type="button"
       :aria-label="$t('common.scrollToTop')"
-      class="fixed bottom-6 right-6 z-40 inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white/90 shadow-lg backdrop-blur transition-transform hover:-translate-y-0.5 dark:border-neutral-700 dark:bg-neutral-900/90"
+      class="fixed bottom-6 left-6 z-40 inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white/90 shadow-lg backdrop-blur transition-transform hover:-translate-y-0.5 dark:border-neutral-700 dark:bg-neutral-900/90"
       @click="scrollTop"
     >
       <Icon name="lucide:arrow-up" class="h-5 w-5" aria-hidden="true" />
