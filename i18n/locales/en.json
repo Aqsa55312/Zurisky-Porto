@@ -1,0 +1,132 @@
+{
+  "skipToContent": "Skip to content",
+  "site": {
+    "title": "Zurisky Aqsa Firmansyah | Full-Stack Developer & AI Developer",
+    "description": "Portfolio of Zurisky Aqsa Firmansyah, a Full-Stack Developer and AI Developer specializing in modern web applications, APIs, dashboards, mobile applications, and AI-powered solutions."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation"
+  },
+  "common": {
+    "downloadCV": "Download CV",
+    "viewProjects": "View Projects",
+    "allProjects": "All Projects",
+    "viewCaseStudy": "View Case Study",
+    "home": "Home",
+    "available": "Available for opportunities",
+    "language": "Language",
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode",
+    "scrollToTop": "Scroll back to top",
+    "close": "Close"
+  },
+  "loading": {
+    "tagline": "Building modern digital products…",
+    "loading": "Loading portfolio"
+  },
+  "hero": {
+    "eyebrow": "Full-Stack Developer • AI Enthusiast",
+    "description": "Full-Stack Developer focused on modern web applications, APIs, databases, dashboards, mobile applications, and AI-powered solutions.",
+    "scrollDown": "Scroll to explore",
+    "stats": {
+      "projects": "Projects",
+      "technologies": "Technologies",
+      "roles": "Professional roles"
+    }
+  },
+  "home": {
+    "portfolioEyebrow": "Portfolio",
+    "selectedTitle": "Selected Projects",
+    "selectedDescription": "A collection of web, mobile, dashboard, and AI projects."
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "About Me",
+    "summary": "Full-Stack Developer focused on modern web applications, APIs, databases, dashboards, mobile applications, and AI-powered solutions. Experienced across backend, frontend, and AI-integrated systems, with a track record of delivering measurable improvements in performance and efficiency.",
+    "location": "Indonesia",
+    "degree": "Teknik Informatika — ULBI",
+    "photoHint": "Add your photo at public/images/profile/photo.webp",
+    "focusTitle": "What I focus on"
+  },
+  "stack": {
+    "eyebrow": "Stack",
+    "title": "Tech Stack",
+    "description": "Technologies I use to design, build, and ship applications.",
+    "selfAssessed": "Bars show self-assessed proficiency."
+  },
+  "experience": {
+    "eyebrow": "Career",
+    "title": "Professional Experience",
+    "techAt": "Technologies at {company}"
+  },
+  "education": {
+    "eyebrow": "Education",
+    "orgEyebrow": "Organization",
+    "sectionLabel": "Education and organization",
+    "notable": "Notable projects"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's Build Something",
+    "cta": "Get In Touch",
+    "placeholderNote": "Contact links are placeholders — update them in data/profile.ts."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "navLabel": "Footer"
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "title": "Projects",
+    "description": "A collection of web, mobile, dashboard, and AI projects.",
+    "search": "Search projects or technologies…",
+    "searchLabel": "Search projects",
+    "categoryLabel": "Filter by category",
+    "techLabel": "Filter by technology",
+    "allTech": "All tech",
+    "found": "No projects found | {count} project found | {count} projects found",
+    "emptyHint": "Try a different search or filter.",
+    "seoTitle": "Projects",
+    "seoDescription": "A collection of web, mobile, dashboard, and AI projects by Zurisky Aqsa Firmansyah."
+  },
+  "detail": {
+    "overview": "Overview",
+    "problem": "Problem",
+    "solution": "Solution",
+    "features": "Key Features",
+    "architecture": "Architecture",
+    "contribution": "My Contribution",
+    "challenges": "Challenges",
+    "results": "Results",
+    "gallery": "Gallery",
+    "galleryHint": "Click any image to view fullscreen. Use arrow keys or swipe to navigate.",
+    "galleryLabel": "Project image gallery",
+    "openImage": "Open image {current} of {total}: {alt}",
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
+    "closeGallery": "Close gallery (Escape)",
+    "techStack": "Tech Stack",
+    "details": "Details",
+    "year": "Year",
+    "category": "Category",
+    "related": "Related Projects",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "notFound": "Project not found.",
+    "notFoundHint": "The project you are looking for does not exist.",
+    "breadcrumb": "Breadcrumb"
+  },
+  "error": {
+    "home": "Home",
+    "wrong": "Something went wrong.",
+    "wrongHint": "Please try again later.",
+    "missingHint": "The page you are looking for does not exist."
+  }
+}

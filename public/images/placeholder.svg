@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Project image placeholder">
+  <rect width="1280" height="720" fill="#18181b"/>
+  <g fill="none" stroke="#3f3f46" stroke-width="2">
+    <rect x="80" y="80" width="1120" height="560" rx="24"/>
+    <circle cx="200" cy="180" r="8" fill="#52525b" stroke="none"/>
+    <circle cx="232" cy="180" r="8" fill="#52525b" stroke="none"/>
+    <circle cx="264" cy="180" r="8" fill="#52525b" stroke="none"/>
+    <rect x="140" y="260" width="420" height="28" rx="8" fill="#27272a" stroke="none"/>
+    <rect x="140" y="310" width="640" height="20" rx="8" fill="#27272a" stroke="none"/>
+    <rect x="140" y="344" width="560" height="20" rx="8" fill="#27272a" stroke="none"/>
+    <rect x="140" y="420" width="180" height="52" rx="12" fill="#fafafa" stroke="none"/>
+    <rect x="336" y="420" width="180" height="52" rx="12" fill="none"/>
+  </g>
+  <text x="640" y="580" text-anchor="middle" font-family="monospace" font-size="28" fill="#71717a">Add screenshot: public/images/projects/&lt;slug&gt;/cover.webp</text>
+</svg>

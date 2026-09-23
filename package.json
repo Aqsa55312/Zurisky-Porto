@@ -1,0 +1,35 @@
+{
+  "name": "zurisky-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portfolio of Zurisky Aqsa Firmansyah — Full-Stack Developer & AI Developer",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.135",
+    "@nuxt/icon": "^1.6.0",
+    "@nuxt/image": "^1.3.0",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/i18n": "^10.6.0",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "ipx": "^4.0.0-beta.1",
+    "nuxt": "^3.15.4"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^0.6.1",
+    "eslint": "^9.18.0",
+    "typescript": "^5.5.4",
+    "vue-tsc": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

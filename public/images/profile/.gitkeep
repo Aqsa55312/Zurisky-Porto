@@ -1,0 +1,4 @@
+# Put your real profile photo here as: photo.webp (recommended 640x800 or square)
+# Path is configured in data/profile.ts -> photo.
+# Until then, About shows an elegant initials monogram — never a broken image.
+# Optional: also drop photo.png/photo.jpg, but keep the `photo` path in sync.

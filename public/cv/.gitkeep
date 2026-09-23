@@ -1,0 +1,4 @@
+# Drop your real CV here as: Zurisky-Aqsa-CV.pdf
+# The site links to /cv/Zurisky-Aqsa-CV.pdf (see data/profile.ts -> cvPath).
+# Until then, the Download CV button points to this path and may 404 —
+# replace this file with the real PDF before going production.

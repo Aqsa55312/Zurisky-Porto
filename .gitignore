@@ -1,0 +1,23 @@
+# Nuxt
+.nuxt/
+.output/
+.data/
+dist/
+
+# Deps
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / IDE
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Env
+.env
+.env.*
+!.env.example

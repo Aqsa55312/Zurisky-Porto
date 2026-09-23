@@ -1,0 +1,132 @@
+{
+  "skipToContent": "Lewati ke konten",
+  "site": {
+    "title": "Zurisky Aqsa Firmansyah | Full-Stack Developer & AI Developer",
+    "description": "Portofolio Zurisky Aqsa Firmansyah, seorang Full-Stack Developer dan AI Developer yang berspesialisasi dalam aplikasi web modern, API, dashboard, aplikasi mobile, dan solusi berbasis AI."
+  },
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "projects": "Proyek",
+    "experience": "Pengalaman",
+    "contact": "Kontak",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "mainNav": "Navigasi utama"
+  },
+  "common": {
+    "downloadCV": "Unduh CV",
+    "viewProjects": "Lihat Proyek",
+    "allProjects": "Semua Proyek",
+    "viewCaseStudy": "Lihat Studi Kasus",
+    "home": "Beranda",
+    "available": "Terbuka untuk peluang kerja",
+    "language": "Bahasa",
+    "switchToDark": "Ganti ke mode gelap",
+    "switchToLight": "Ganti ke mode terang",
+    "scrollToTop": "Kembali ke atas",
+    "close": "Tutup"
+  },
+  "loading": {
+    "tagline": "Membangun produk digital modern…",
+    "loading": "Memuat portofolio"
+  },
+  "hero": {
+    "eyebrow": "Full-Stack Developer • AI Enthusiast",
+    "description": "Full-Stack Developer yang fokus pada aplikasi web modern, API, database, dashboard, aplikasi mobile, dan solusi berbasis AI.",
+    "scrollDown": "Gulir untuk menjelajah",
+    "stats": {
+      "projects": "Proyek",
+      "technologies": "Teknologi",
+      "roles": "Peran profesional"
+    }
+  },
+  "home": {
+    "portfolioEyebrow": "Portofolio",
+    "selectedTitle": "Proyek Pilihan",
+    "selectedDescription": "Kumpulan proyek web, mobile, dashboard, dan AI."
+  },
+  "about": {
+    "eyebrow": "Tentang",
+    "title": "Tentang Saya",
+    "summary": "Full-Stack Developer yang fokus pada aplikasi web modern, API, database, dashboard, aplikasi mobile, dan solusi berbasis AI. Berpengalaman di sistem backend, frontend, dan terintegrasi AI, dengan rekam jejak peningkatan performa dan efisiensi yang terukur.",
+    "location": "Indonesia",
+    "degree": "Teknik Informatika — ULBI",
+    "photoHint": "Tambahkan foto di public/images/profile/photo.webp",
+    "focusTitle": "Fokus saya"
+  },
+  "stack": {
+    "eyebrow": "Teknologi",
+    "title": "Tech Stack",
+    "description": "Teknologi yang saya gunakan untuk merancang, membangun, dan merilis aplikasi.",
+    "selfAssessed": "Bar menunjukkan penilaian mandiri."
+  },
+  "experience": {
+    "eyebrow": "Karier",
+    "title": "Pengalaman Profesional",
+    "techAt": "Teknologi di {company}"
+  },
+  "education": {
+    "eyebrow": "Pendidikan",
+    "orgEyebrow": "Organisasi",
+    "sectionLabel": "Pendidikan dan organisasi",
+    "notable": "Proyek penting"
+  },
+  "contact": {
+    "eyebrow": "Kontak",
+    "title": "Mari Bangun Sesuatu",
+    "cta": "Hubungi Saya",
+    "placeholderNote": "Tautan kontak masih placeholder — perbarui di data/profile.ts."
+  },
+  "footer": {
+    "rights": "Hak cipta dilindungi.",
+    "navLabel": "Footer"
+  },
+  "projects": {
+    "eyebrow": "Portofolio",
+    "title": "Proyek",
+    "description": "Kumpulan proyek web, mobile, dashboard, dan AI.",
+    "search": "Cari proyek atau teknologi…",
+    "searchLabel": "Cari proyek",
+    "categoryLabel": "Filter berdasarkan kategori",
+    "techLabel": "Filter berdasarkan teknologi",
+    "allTech": "Semua teknologi",
+    "found": "Tidak ada proyek ditemukan | {count} proyek ditemukan | {count} proyek ditemukan",
+    "emptyHint": "Coba kata kunci atau filter lain.",
+    "seoTitle": "Proyek",
+    "seoDescription": "Kumpulan proyek web, mobile, dashboard, dan AI oleh Zurisky Aqsa Firmansyah."
+  },
+  "detail": {
+    "overview": "Ringkasan",
+    "problem": "Masalah",
+    "solution": "Solusi",
+    "features": "Fitur Utama",
+    "architecture": "Arsitektur",
+    "contribution": "Kontribusi Saya",
+    "challenges": "Tantangan",
+    "results": "Hasil",
+    "gallery": "Galeri",
+    "galleryHint": "Klik gambar untuk mode layar penuh. Gunakan tombol panah atau geser untuk navigasi.",
+    "galleryLabel": "Galeri gambar proyek",
+    "openImage": "Buka gambar {current} dari {total}: {alt}",
+    "prevImage": "Gambar sebelumnya",
+    "nextImage": "Gambar berikutnya",
+    "closeGallery": "Tutup galeri (Escape)",
+    "techStack": "Tech Stack",
+    "details": "Detail",
+    "year": "Tahun",
+    "category": "Kategori",
+    "related": "Proyek Terkait",
+    "liveDemo": "Demo Langsung",
+    "sourceCode": "Kode Sumber",
+    "notFound": "Proyek tidak ditemukan.",
+    "notFoundHint": "Proyek yang Anda cari tidak ada.",
+    "breadcrumb": "Breadcrumb"
+  },
+  "error": {
+    "home": "Beranda",
+    "wrong": "Terjadi kesalahan.",
+    "wrongHint": "Silakan coba lagi nanti.",
+    "missingHint": "Halaman yang Anda cari tidak ada."
+  }
+}
