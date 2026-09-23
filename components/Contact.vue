@@ -5,7 +5,7 @@
         <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-400/60 to-transparent" aria-hidden="true" />
         <div class="pointer-events-none absolute -top-24 left-1/2 h-48 w-[36rem] max-w-full -translate-x-1/2 rounded-full bg-orb" aria-hidden="true" />
         <p class="eyebrow relative">{{ $t('contact.eyebrow') }}</p>
-        <h2 id="contact-heading" class="relative mx-auto mt-3 max-w-xl text-3xl font-bold tracking-tight sm:text-4xl">
+        <h2 id="contact-heading" class="relative mx-auto mt-3 max-w-xl font-display text-3xl font-bold tracking-tight sm:text-4xl">
           {{ $t('contact.title') }}
         </h2>
         <p class="relative mx-auto mt-4 max-w-xl leading-relaxed text-neutral-600 dark:text-neutral-400">

@@ -2,7 +2,7 @@
   <section ref="stackSection" class="border-t border-neutral-200/70 dark:border-neutral-800/70" aria-labelledby="stack-heading" data-reveal="right">
     <div class="container-site py-16 lg:py-24">
       <p class="eyebrow">{{ $t('stack.eyebrow') }}</p>
-      <h2 id="stack-heading" class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">{{ $t('stack.title') }}</h2>
+      <h2 id="stack-heading" class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">{{ $t('stack.title') }}</h2>
       <p class="mt-3 max-w-2xl text-neutral-600 dark:text-neutral-300">
         {{ $t('stack.description') }}
       </p>

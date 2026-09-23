@@ -2,7 +2,7 @@
   <div class="container-site flex min-h-[60vh] items-center justify-center py-16">
     <div class="card max-w-lg p-10 text-center">
       <p class="font-mono text-sm text-neutral-500">{{ error?.statusCode ?? 500 }}</p>
-      <h1 class="mt-2 text-2xl font-bold">{{ error?.statusCode === 404 ? $t('detail.notFound') : $t('error.wrong') }}</h1>
+      <h1 class="mt-2 font-display text-2xl font-bold">{{ error?.statusCode === 404 ? $t('detail.notFound') : $t('error.wrong') }}</h1>
       <p class="mt-2 text-sm text-neutral-500">
         {{ error?.statusCode === 404 ? $t('error.missingHint') : $t('error.wrongHint') }}
       </p>

@@ -3,7 +3,7 @@
     <PageBackdrop theme="ocean" />
     <div class="container-site py-10 lg:py-14">
     <p class="eyebrow">{{ $t('projects.eyebrow') }}</p>
-    <h1 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">{{ $t('projects.title') }}</h1>
+    <h1 class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">{{ $t('projects.title') }}</h1>
     <p class="mt-3 max-w-2xl text-neutral-600 dark:text-neutral-400">
       {{ $t('projects.description') }}
     </p>

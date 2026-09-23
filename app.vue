@@ -2,6 +2,7 @@
   <div class="relative min-h-screen">
     <LoadingScreen :visible="loading" />
     <WebGLParticles />
+    <ScrollProgress />
 
     <!-- Global ambient background -->
     <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">

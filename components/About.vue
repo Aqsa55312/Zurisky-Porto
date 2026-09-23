@@ -5,7 +5,7 @@
         <!-- Left Side: Bio Overview & Highlights -->
         <div class="lg:col-span-5">
           <p class="eyebrow">{{ $t('about.eyebrow') }}</p>
-          <h2 id="about-heading" class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+          <h2 id="about-heading" class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
             {{ $t('about.title') }}
           </h2>
           <p class="mt-4 leading-relaxed text-neutral-600 dark:text-neutral-300">

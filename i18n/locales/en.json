@@ -42,12 +42,13 @@
     }
   },
   "home": {
-    "portfolioEyebrow": "Portfolio",
+    "portfolioEyebrow": "01 · Portfolio",
     "selectedTitle": "Selected Projects",
-    "selectedDescription": "A collection of web, mobile, dashboard, and AI projects."
+    "selectedDescription": "A collection of web, mobile, dashboard, and AI projects.",
+    "spotlightBadge": "Featured"
   },
   "about": {
-    "eyebrow": "About",
+    "eyebrow": "02 · About",
     "title": "About Me",
     "summary": "Full-Stack Developer focused on modern web applications, APIs, databases, dashboards, mobile applications, and AI-powered solutions. Experienced across backend, frontend, and AI-integrated systems, with a track record of delivering measurable improvements in performance and efficiency.",
     "location": "Indonesia",
@@ -56,24 +57,24 @@
     "focusTitle": "What I focus on"
   },
   "stack": {
-    "eyebrow": "Stack",
+    "eyebrow": "03 · Stack",
     "title": "Tech Stack",
     "description": "Technologies I use to design, build, and ship applications.",
     "selfAssessed": "Bars show self-assessed proficiency."
   },
   "experience": {
-    "eyebrow": "Career",
+    "eyebrow": "04 · Career",
     "title": "Professional Experience",
     "techAt": "Technologies at {company}"
   },
   "education": {
-    "eyebrow": "Education",
-    "orgEyebrow": "Organization",
+    "eyebrow": "05 · Education",
+    "orgEyebrow": "06 · Organization",
     "sectionLabel": "Education and organization",
     "notable": "Notable projects"
   },
   "contact": {
-    "eyebrow": "Contact",
+    "eyebrow": "07 · Contact",
     "title": "Let's Build Something",
     "cta": "Get In Touch",
     "placeholderNote": "Contact links are placeholders — update them in data/profile.ts."

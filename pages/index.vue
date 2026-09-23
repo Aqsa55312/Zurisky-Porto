@@ -8,7 +8,7 @@
         <div class="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p class="eyebrow">{{ $t('home.portfolioEyebrow') }}</p>
-            <h2 id="selected-heading" class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">{{ $t('home.selectedTitle') }}</h2>
+            <h2 id="selected-heading" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">{{ $t('home.selectedTitle') }}</h2>
             <p class="mt-3 max-w-2xl text-neutral-600 dark:text-neutral-400">
               {{ $t('home.selectedDescription') }}
             </p>
@@ -17,7 +17,8 @@
             {{ $t('common.allProjects') }} <Icon name="lucide:arrow-right" class="h-4 w-4" aria-hidden="true" />
           </NuxtLink>
         </div>
-        <ProjectGrid :projects="featured" class="mt-8" />
+        <ProjectSpotlight v-if="spotlight" :project="spotlight" class="mt-8" />
+        <ProjectGrid :projects="rest" class="mt-6" />
       </div>
     </section>
 
@@ -39,7 +40,8 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const { featuredProjects } = useProjects()
-const featured = computed(() => featuredProjects.value)
+const spotlight = computed(() => featuredProjects.value[0])
+const rest = computed(() => featuredProjects.value.slice(1))
 
 useScrollReveal()
 

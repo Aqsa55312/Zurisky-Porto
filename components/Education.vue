@@ -1,7 +1,7 @@
 <template>
   <article class="card card-hover flex h-full flex-col p-6 sm:p-7" aria-labelledby="edu-heading">
     <p class="eyebrow">{{ $t('education.eyebrow') }}</p>
-    <h2 id="edu-heading" class="mt-3 flex items-center gap-2 text-xl font-bold tracking-tight">
+    <h2 id="edu-heading" class="mt-3 flex font-display items-center gap-2 text-xl font-bold tracking-tight">
       <Icon name="lucide:graduation-cap" class="h-5 w-5 shrink-0 text-indigo-500" aria-hidden="true" />
       {{ education.institution }}
     </h2>

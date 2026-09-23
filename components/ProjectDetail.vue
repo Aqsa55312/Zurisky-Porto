@@ -15,7 +15,7 @@
         <span v-for="c in project.category" :key="c" class="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium dark:bg-neutral-800">{{ c }}</span>
         <span class="rounded-full bg-neutral-100 px-3 py-1 font-mono text-xs dark:bg-neutral-800">{{ project.year }}</span>
       </div>
-      <h1 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">{{ project.title }}</h1>
+      <h1 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">{{ project.title }}</h1>
       <p class="mt-4 max-w-3xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-400">{{ lp(project.description, project.descriptionId) }}</p>
       <div class="mt-6 flex flex-wrap gap-3">
         <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener" class="inline-flex h-11 items-center gap-2 rounded-xl bg-neutral-900 px-5 text-sm font-semibold text-white dark:bg-white dark:text-neutral-900">

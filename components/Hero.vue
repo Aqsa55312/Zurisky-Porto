@@ -42,7 +42,7 @@
       </div>
 
       <p class="reveal reveal-delay-1 mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-indigo-600 dark:text-indigo-300">{{ $t('hero.eyebrow') }}</p>
-      <h1 class="reveal reveal-delay-1 mt-3 text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
+      <h1 class="reveal reveal-delay-1 mt-3 font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
         {{ profile.name }}
       </h1>
       <p class="reveal reveal-delay-1 mt-4 max-w-xl text-xl font-semibold leading-snug">

@@ -2,7 +2,7 @@
   <section id="experience" class="scroll-mt-20 border-t border-neutral-200/70 dark:border-neutral-800/70" aria-labelledby="exp-heading" data-reveal="up">
     <div class="container-site py-16 lg:py-24">
       <p class="eyebrow">{{ $t('experience.eyebrow') }}</p>
-      <h2 id="exp-heading" class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">{{ $t('experience.title') }}</h2>
+      <h2 id="exp-heading" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">{{ $t('experience.title') }}</h2>
       <ol class="relative mt-10 space-y-6 border-l border-neutral-200 pl-6 dark:border-neutral-800 sm:pl-8">
         <li v-for="(job, i) in experience" :key="`${job.company}-${i}`" class="relative">
           <span class="absolute -left-[31px] top-1 flex h-4 w-4 items-center justify-center rounded-full border-2 border-white bg-gradient-to-br from-indigo-500 to-emerald-500 dark:border-[#0a0a0b] sm:-left-[39px]" aria-hidden="true" />

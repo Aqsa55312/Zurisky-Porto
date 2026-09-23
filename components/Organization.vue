@@ -7,7 +7,7 @@
       :aria-label="org.name"
     >
       <p class="eyebrow">{{ $t('education.orgEyebrow') }}</p>
-      <h2 class="mt-3 flex items-center gap-2 text-xl font-bold tracking-tight">
+      <h2 class="mt-3 flex items-center gap-2 font-display text-xl font-bold tracking-tight">
         <Icon name="lucide:users" class="h-5 w-5 shrink-0 text-emerald-500" aria-hidden="true" />
         {{ org.name }}
       </h2>

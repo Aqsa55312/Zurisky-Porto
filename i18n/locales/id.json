@@ -42,12 +42,13 @@
     }
   },
   "home": {
-    "portfolioEyebrow": "Portofolio",
+    "portfolioEyebrow": "01 · Portofolio",
     "selectedTitle": "Proyek Pilihan",
-    "selectedDescription": "Kumpulan proyek web, mobile, dashboard, dan AI."
+    "selectedDescription": "Kumpulan proyek web, mobile, dashboard, dan AI.",
+    "spotlightBadge": "Unggulan"
   },
   "about": {
-    "eyebrow": "Tentang",
+    "eyebrow": "02 · Tentang",
     "title": "Tentang Saya",
     "summary": "Full-Stack Developer yang fokus pada aplikasi web modern, API, database, dashboard, aplikasi mobile, dan solusi berbasis AI. Berpengalaman di sistem backend, frontend, dan terintegrasi AI, dengan rekam jejak peningkatan performa dan efisiensi yang terukur.",
     "location": "Indonesia",
@@ -56,24 +57,24 @@
     "focusTitle": "Fokus saya"
   },
   "stack": {
-    "eyebrow": "Teknologi",
+    "eyebrow": "03 · Teknologi",
     "title": "Tech Stack",
     "description": "Teknologi yang saya gunakan untuk merancang, membangun, dan merilis aplikasi.",
     "selfAssessed": "Bar menunjukkan penilaian mandiri."
   },
   "experience": {
-    "eyebrow": "Karier",
+    "eyebrow": "04 · Karier",
     "title": "Pengalaman Profesional",
     "techAt": "Teknologi di {company}"
   },
   "education": {
-    "eyebrow": "Pendidikan",
-    "orgEyebrow": "Organisasi",
+    "eyebrow": "05 · Pendidikan",
+    "orgEyebrow": "06 · Organisasi",
     "sectionLabel": "Pendidikan dan organisasi",
     "notable": "Proyek penting"
   },
   "contact": {
-    "eyebrow": "Kontak",
+    "eyebrow": "07 · Kontak",
     "title": "Mari Bangun Sesuatu",
     "cta": "Hubungi Saya",
     "placeholderNote": "Tautan kontak masih placeholder — perbarui di data/profile.ts."
