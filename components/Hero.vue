@@ -313,14 +313,8 @@ onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
   onScroll()
 
-  // Wait out the splash loader on first visit so typing isn't hidden behind it.
-  let firstVisit = true
-  try {
-    firstVisit = sessionStorage.getItem('portfolio-loaded') !== '1'
-  } catch {
-    // storage unavailable — assume first visit
-  }
-  typeDelay = setTimeout(runTyping, firstVisit ? 1600 : 350)
+  // The splash loader plays on every visit — wait it out so typing isn't hidden.
+  typeDelay = setTimeout(runTyping, 1600)
 
   onUnmounted(() => {
     stopTyping()

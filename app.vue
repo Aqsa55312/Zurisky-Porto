@@ -40,27 +40,13 @@ useHead({
 const loading = ref(true)
 
 onMounted(() => {
-  // Show the splash only on first load per session; skip fast for reduced motion.
-  try {
-    if (sessionStorage.getItem('portfolio-loaded') === '1') {
-      loading.value = false
-      return
-    }
-  } catch {
-    // storage unavailable — still show the loader briefly
-  }
-
+  // Always play the splash on every page load/refresh.
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   document.body.style.overflow = 'hidden'
 
   const done = (): void => {
     loading.value = false
     document.body.style.overflow = ''
-    try {
-      sessionStorage.setItem('portfolio-loaded', '1')
-    } catch {
-      // ignore
-    }
   }
 
   if (reduced) {
