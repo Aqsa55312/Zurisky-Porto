@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zurisky-portfolio.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://zurisky-portfolio.vercel.app/projects</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://zurisky-portfolio.vercel.app/projects/healthlens-ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://zurisky-portfolio.vercel.app/projects/tjsl-dashboard</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://zurisky-portfolio.vercel.app/projects/gudang-pro</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://zurisky-portfolio.vercel.app/projects/kineticview-ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aqsa.my.id/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://aqsa.my.id/projects</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://aqsa.my.id/projects/ecommerce-platform</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aqsa.my.id/projects/healthlens-ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aqsa.my.id/projects/tjsl-dashboard</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aqsa.my.id/projects/gudang-pro</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://aqsa.my.id/projects/kineticview-ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

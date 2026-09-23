@@ -45,7 +45,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'canonical', href: 'https://zurisky-portfolio.vercel.app' }
+        { rel: 'canonical', href: 'https://aqsa.my.id' }
       ]
     }
   },

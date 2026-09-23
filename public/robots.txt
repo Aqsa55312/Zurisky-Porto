@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://zurisky-portfolio.vercel.app/sitemap.xml
+Sitemap: https://aqsa.my.id/sitemap.xml

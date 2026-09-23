@@ -52,12 +52,13 @@ public/images/projects/healthlens/dashboard.webp
 
 Filenames/alt text are centralized in `data/projects.ts`. Missing files fall back to `public/images/placeholder.svg` — no broken images.
 
-## Deploy (Vercel)
+## Deploy (Vercel + custom domain aqsa.my.id)
 
 1. Push to GitHub.
 2. Import the repo in Vercel (framework preset: Nuxt.js, build: `npm run build`).
-3. Update the canonical URL + sitemap domain in `nuxt.config.ts`, `public/robots.txt`, `public/sitemap.xml`.
-4. Verify: all routes, gallery keyboard nav, dark/light toggle, CV link, SEO meta.
+3. In Vercel: Settings → Domains → add `aqsa.my.id` (and `www.aqsa.my.id` if used), then point your DNS to Vercel (A record `76.76.21.21` for apex, or CNAME to `cname.vercel-dns.com` for www — follow Vercel's instructions).
+4. Canonical URL + sitemap already use `https://aqsa.my.id` (`nuxt.config.ts`, `public/robots.txt`, `public/sitemap.xml`).
+5. Verify: all routes, gallery keyboard nav, dark/light toggle, CV link, SEO meta.
 
 ## Project structure
 
