@@ -26,8 +26,8 @@ export const projects: Project[] = [
     cover: '/images/projects/ecommerce/cover.webp',
     coverAlt: 'Multi-platform e-commerce system preview',
     images: [
-      { src: '/images/projects/ecommerce/cover.webp', alt: 'Multi-platform e-commerce system cover artwork' },
-      { src: '/images/projects/ecommerce/dashboard.webp', alt: 'Multi-platform e-commerce system dashboard artwork' }
+      { src: '/images/projects/ecommerce/cover.webp', alt: 'In-store checkout with mobile payment — e-commerce concept' },
+      { src: '/images/projects/ecommerce/dashboard.webp', alt: 'Retail store shelves — commerce concept' }
     ],
     technologies: ['Laravel', 'MySQL', 'Flutter', 'React.js', 'REST API', 'Postman'],
     features: [
@@ -96,11 +96,8 @@ export const projects: Project[] = [
     cover: '/images/projects/healthlens/cover.webp',
     coverAlt: 'HealthLens AI dashboard preview',
     images: [
-      { src: '/images/projects/healthlens/cover.webp', alt: 'HealthLens AI cover artwork' },
-      { src: '/images/projects/healthlens/dashboard.webp', alt: 'HealthLens AI dashboard artwork' },
-      { src: '/images/projects/healthlens/ocr.webp', alt: 'HealthLens AI OCR scan artwork' },
-      { src: '/images/projects/healthlens/ai-analysis.webp', alt: 'HealthLens AI analysis artwork' },
-      { src: '/images/projects/healthlens/mobile.webp', alt: 'HealthLens AI mobile app artwork' }
+      { src: '/images/projects/healthlens/cover.webp', alt: 'Doctor using a smartphone — mobile health concept' },
+      { src: '/images/projects/healthlens/dashboard.webp', alt: 'Medical laboratory with analyzers — lab concept' }
     ],
     technologies: ['React', 'TypeScript', 'Capacitor', 'Tesseract.js', 'OpenRouter', 'Firebase', 'Recharts'],
     features: [
@@ -187,10 +184,8 @@ export const projects: Project[] = [
     cover: '/images/projects/tjsl/cover.webp',
     coverAlt: 'PUMK TJSL dashboard preview',
     images: [
-      { src: '/images/projects/tjsl/cover.webp', alt: 'PUMK TJSL dashboard cover artwork' },
-      { src: '/images/projects/tjsl/dashboard.webp', alt: 'PUMK TJSL dashboard artwork' },
-      { src: '/images/projects/tjsl/table.webp', alt: 'PUMK TJSL data table artwork' },
-      { src: '/images/projects/tjsl/report.webp', alt: 'PUMK TJSL report artwork' }
+      { src: '/images/projects/tjsl/cover.webp', alt: 'Analytics dashboard on a laptop — reporting concept' },
+      { src: '/images/projects/tjsl/dashboard.webp', alt: 'Data analysis on a laptop screen — monitoring concept' }
     ],
     technologies: ['Python', 'Flask', 'MySQL', 'Tailwind CSS'],
     features: [
@@ -243,10 +238,8 @@ export const projects: Project[] = [
     cover: '/images/projects/gudang-pro/cover.webp',
     coverAlt: 'Gudang Pro inventory preview',
     images: [
-      { src: '/images/projects/gudang-pro/cover.webp', alt: 'Gudang Pro cover artwork' },
-      { src: '/images/projects/gudang-pro/dashboard.webp', alt: 'Gudang Pro dashboard artwork' },
-      { src: '/images/projects/gudang-pro/inventory.webp', alt: 'Gudang Pro inventory artwork' },
-      { src: '/images/projects/gudang-pro/mobile.webp', alt: 'Gudang Pro mobile app artwork' }
+      { src: '/images/projects/gudang-pro/cover.webp', alt: 'Warehouse interior with stocked shelves — inventory concept' },
+      { src: '/images/projects/gudang-pro/dashboard.webp', alt: 'Warehouse aisle with pallets — storage concept' }
     ],
     technologies: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'Flutter', 'React'],
     features: ['Authentication', 'Product management', 'Inventory management', 'CRUD operations', 'API integration'],
@@ -283,9 +276,8 @@ export const projects: Project[] = [
     cover: '/images/projects/kineticview/cover.webp',
     coverAlt: 'KineticView AI detection preview',
     images: [
-      { src: '/images/projects/kineticview/cover.webp', alt: 'KineticView AI cover artwork' },
-      { src: '/images/projects/kineticview/detection.webp', alt: 'KineticView AI object detection artwork' },
-      { src: '/images/projects/kineticview/dashboard.webp', alt: 'KineticView AI dashboard artwork' }
+      { src: '/images/projects/kineticview/cover.webp', alt: '3D AI letters with neural lines — artificial intelligence concept' },
+      { src: '/images/projects/kineticview/dashboard.webp', alt: 'Robot using a laptop — AI concept' }
     ],
     technologies: ['Computer Vision', 'Object Detection', 'AI'],
     features: ['Image analysis', 'Object detection', 'Visual monitoring'],
