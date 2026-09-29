@@ -164,7 +164,7 @@ export const projects: Project[] = [
       'Alur mobile yang usable dari pengambilan foto hingga hasil terinterpretasi',
       'Dashboard yang menyajikan tren dalam bentuk visual yang mudah dipahami'
     ],
-    github: null,
+    github: 'https://github.com/Aqsa55312/Labview',
     demo: null
   },
   {
