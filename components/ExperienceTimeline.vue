@@ -8,21 +8,27 @@
         {{ $t('experience.count', { roles: roleCount, companies: companyCount }) }}
       </p>
 
-      <ol ref="listRef" class="relative mt-10 space-y-6 pl-8 sm:pl-10">
-        <!-- Rail track + scroll progress fill -->
-        <div class="absolute inset-y-2 left-[11px] w-[2px] overflow-hidden rounded-full bg-neutral-200 sm:left-[15px] dark:bg-neutral-800" aria-hidden="true">
+      <ol ref="listRef" class="relative mt-10 space-y-8 pl-8 sm:pl-10 lg:space-y-14 lg:pl-0">
+        <!-- Spine: left rail on mobile, center on desktop -->
+        <div class="absolute inset-y-2 left-[11px] w-[2px] overflow-hidden rounded-full bg-neutral-200 sm:left-[15px] lg:left-1/2 lg:-translate-x-1/2 dark:bg-neutral-800" aria-hidden="true">
           <div class="w-full bg-gradient-to-b from-indigo-500 via-violet-500 to-emerald-500 transition-[height] duration-150" :style="{ height: `${Math.round(fillPct * 100)}%` }" />
         </div>
 
-        <li v-for="(job, i) in experience" :key="`${job.company}-${i}`" class="group relative">
+        <li
+          v-for="(job, i) in experience"
+          :key="`${job.company}-${i}`"
+          class="group relative lg:grid lg:grid-cols-2 lg:gap-16"
+        >
           <span
-            class="absolute -left-[29px] top-6 flex h-4 w-4 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-emerald-500 ring-4 ring-white transition-shadow group-hover:shadow-[0_0_16px_2px_rgba(124,58,237,0.5)] sm:-left-[33px] dark:ring-[#0a0a0b]"
+            class="absolute -left-[29px] top-6 flex h-4 w-4 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-emerald-500 ring-4 ring-white transition-shadow group-hover:shadow-[0_0_16px_2px_rgba(124,58,237,0.5)] sm:-left-[33px] lg:left-1/2 lg:top-10 lg:-translate-x-1/2 dark:ring-[#0a0a0b]"
             aria-hidden="true"
           />
-          <article class="card card-hover relative overflow-hidden p-5 sm:p-6">
-            <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-400/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true" />
-            <div class="flex flex-wrap items-start justify-between gap-3">
-              <div class="flex min-w-0 items-start gap-3.5">
+
+          <!-- Card side -->
+          <div :class="i % 2 === 0 ? 'lg:col-start-1' : 'lg:col-start-2 lg:row-start-1'">
+            <article class="card card-hover relative h-full overflow-hidden p-5 sm:p-6">
+              <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-400/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true" />
+              <div class="flex items-start gap-3.5">
                 <span
                   class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br font-display text-sm font-bold text-white shadow-md"
                   :class="avatarClass(i)"
@@ -30,8 +36,17 @@
                 >
                   {{ initialsOf(job.company) }}
                 </span>
-                <div class="min-w-0">
-                  <h3 class="font-display font-semibold leading-snug">{{ job.role }}</h3>
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-start justify-between gap-2">
+                    <h3 class="font-display font-semibold leading-snug">{{ job.role }}</h3>
+                    <span v-if="isCurrent(job.period)" class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
+                      <span class="relative flex h-1.5 w-1.5">
+                        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+                        <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                      </span>
+                      {{ $t('experience.current') }}
+                    </span>
+                  </div>
                   <p class="mt-0.5 flex flex-wrap items-center gap-x-1.5 text-sm text-neutral-600 dark:text-neutral-400">
                     <span class="font-medium text-neutral-800 dark:text-neutral-200">{{ job.company }}</span>
                     <span v-if="job.location" class="inline-flex items-center gap-1 text-xs">
@@ -40,32 +55,40 @@
                   </p>
                 </div>
               </div>
-              <div class="flex flex-wrap items-center gap-2">
-                <span v-if="isCurrent(job.period)" class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-                  <span class="relative flex h-1.5 w-1.5">
-                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
-                    <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                  </span>
-                  {{ $t('experience.current') }}
-                </span>
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium dark:bg-neutral-800">
-                  <Icon name="lucide:calendar" class="h-3 w-3" aria-hidden="true" />{{ job.period }}
-                </span>
-              </div>
+              <p v-if="job.description" class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">{{ lp(job.description, job.descriptionId) }}</p>
+              <ul v-if="jobHighlights(job).length > 0" class="mt-3 space-y-2">
+                <li v-for="(h, hi) in jobHighlights(job)" :key="hi" class="flex items-start gap-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+                  <Icon name="lucide:chevron-right" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500 dark:text-indigo-400" aria-hidden="true" />
+                  <span v-html="withMetrics(h)" />
+                </li>
+              </ul>
+              <ul class="mt-4 flex flex-wrap gap-1.5" :aria-label="$t('experience.techAt', { company: job.company })">
+                <li v-for="t in job.technologies" :key="t" class="rounded-md border border-neutral-200 px-2 py-1 text-[11px] font-medium text-neutral-600 transition-colors hover:border-indigo-300 hover:text-indigo-600 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-indigo-500 dark:hover:text-indigo-300">
+                  {{ t }}
+                </li>
+              </ul>
+              <p class="mt-4 inline-flex items-center gap-1.5 rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-600 lg:hidden dark:bg-neutral-800 dark:text-neutral-300">
+                <Icon name="lucide:calendar" class="h-3 w-3" aria-hidden="true" />{{ job.period }}
+              </p>
+            </article>
+          </div>
+
+          <!-- Meta side (desktop only): ghost index + big period -->
+          <div
+            class="hidden lg:block"
+            :class="i % 2 === 0 ? 'lg:col-start-2' : 'lg:col-start-1 lg:row-start-1'"
+            aria-hidden="true"
+          >
+            <div class="flex h-full flex-col justify-start pt-1" :class="i % 2 === 0 ? 'items-start pl-2' : 'items-end pr-2 text-right'">
+              <span class="font-display text-6xl font-bold tabular-nums text-neutral-200 select-none dark:text-neutral-800">
+                0{{ i + 1 }}
+              </span>
+              <span class="mt-2 inline-flex items-center gap-1.5 font-display text-lg font-semibold text-neutral-700 dark:text-neutral-300">
+                <Icon name="lucide:calendar" class="h-4 w-4 text-indigo-500" aria-hidden="true" />
+                {{ job.period }}
+              </span>
             </div>
-            <p v-if="job.description" class="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">{{ lp(job.description, job.descriptionId) }}</p>
-            <ul v-if="jobHighlights(job).length > 0" class="mt-3 space-y-2">
-              <li v-for="(h, hi) in jobHighlights(job)" :key="hi" class="flex items-start gap-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-                <Icon name="lucide:chevron-right" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500 dark:text-indigo-400" aria-hidden="true" />
-                <span v-html="withMetrics(h)" />
-              </li>
-            </ul>
-            <ul class="mt-4 flex flex-wrap gap-1.5" :aria-label="$t('experience.techAt', { company: job.company })">
-              <li v-for="t in job.technologies" :key="t" class="rounded-md border border-neutral-200 px-2 py-1 text-[11px] font-medium text-neutral-600 transition-colors hover:border-indigo-300 hover:text-indigo-600 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-indigo-500 dark:hover:text-indigo-300">
-                {{ t }}
-              </li>
-            </ul>
-          </article>
+          </div>
         </li>
       </ol>
     </div>
