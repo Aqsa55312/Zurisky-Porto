@@ -2,7 +2,7 @@
   <canvas
     v-if="supported"
     ref="canvasRef"
-    class="pointer-events-none fixed inset-0 -z-[5] h-full w-full"
+    class="pointer-events-none fixed inset-0 z-0 h-full w-full opacity-80 sm:opacity-100"
     aria-hidden="true"
   />
 </template>
@@ -123,7 +123,7 @@ function compile(glc: WebGLRenderingContext, type: number, src: string): WebGLSh
 onMounted(() => {
   const canvas = canvasRef.value
   if (!canvas) return
-  const glc = canvas.getContext('webgl', { alpha: true, antialias: false, depth: false, stencil: false })
+  const glc = canvas.getContext('webgl', { alpha: true, antialias: false, depth: false, stencil: false, preserveDrawingBuffer: false })
   if (!glc) {
     supported.value = false
     return
@@ -174,18 +174,17 @@ onMounted(() => {
 
   const seed = (): void => {
     const area = W * H
-    let n = Math.floor(area / 16000)
-    n = Math.max(35, Math.min(110, n))
-    if (coarse) n = Math.floor(n * 0.5)
+    let n = Math.floor(area / 18000)
+    n = Math.max(20, Math.min(coarse ? 28 : 90, n))
     parts = Array.from({ length: n }, (_, i) => ({
       x: Math.random() * W,
       y: Math.random() * H,
-      size: 1.6 + Math.random() * 2.6,
-      vy: 6 + Math.random() * 14,
-      swayAmp: 8 + Math.random() * 18,
-      swayFreq: 0.2 + Math.random() * 0.5,
+      size: (coarse ? 1.4 : 1.6) + Math.random() * 2.2,
+      vy: 6 + Math.random() * 12,
+      swayAmp: 6 + Math.random() * 14,
+      swayFreq: 0.2 + Math.random() * 0.4,
       phase: Math.random() * Math.PI * 2,
-      alpha: 0.45 + Math.random() * 0.4,
+      alpha: 0.4 + Math.random() * 0.4,
       twinkle: 0.6 + Math.random() * 1.4,
       ci: i % 3,
       bright: 0.85 + Math.random() * 0.3
@@ -196,10 +195,14 @@ onMounted(() => {
     if (colBuf) glc.deleteBuffer(colBuf)
     posBuf = glc.createBuffer()
     colBuf = glc.createBuffer()
+    glc.bindBuffer(glc.ARRAY_BUFFER, posBuf)
+    glc.bufferData(glc.ARRAY_BUFFER, posData.byteLength, glc.DYNAMIC_DRAW)
+    glc.bindBuffer(glc.ARRAY_BUFFER, colBuf)
+    glc.bufferData(glc.ARRAY_BUFFER, colData.byteLength, glc.DYNAMIC_DRAW)
   }
 
   const resize = (): void => {
-    const pr = Math.min(window.devicePixelRatio || 1, 1.5)
+    const pr = Math.min(window.devicePixelRatio || 1, coarse ? 1.0 : 1.25)
     W = window.innerWidth
     H = window.innerHeight
     canvas.width = Math.floor(W * pr)
@@ -254,11 +257,11 @@ onMounted(() => {
     glc.clear(glc.COLOR_BUFFER_BIT)
     glc.uniform1f(loc.uTime, time)
     glc.bindBuffer(glc.ARRAY_BUFFER, posBuf)
-    glc.bufferData(glc.ARRAY_BUFFER, posData, glc.DYNAMIC_DRAW)
+    glc.bufferSubData(glc.ARRAY_BUFFER, 0, posData)
     glc.enableVertexAttribArray(loc.aPos)
     glc.vertexAttribPointer(loc.aPos, 2, glc.FLOAT, false, 0, 0)
     glc.bindBuffer(glc.ARRAY_BUFFER, colBuf)
-    glc.bufferData(glc.ARRAY_BUFFER, colData, glc.DYNAMIC_DRAW)
+    glc.bufferSubData(glc.ARRAY_BUFFER, 0, colData)
     glc.enableVertexAttribArray(loc.aColor)
     glc.vertexAttribPointer(loc.aColor, 3, glc.FLOAT, false, 0, 0)
     glc.drawArrays(glc.POINTS, 0, parts.length)

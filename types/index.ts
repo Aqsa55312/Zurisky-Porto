@@ -78,6 +78,20 @@ export interface Organization {
   highlightsId?: string[]
 }
 
+export interface Certificate {
+  slug: string
+  title: string
+  titleId?: string
+  issuer: string
+  year: string
+  image: string
+  imageAlt: string
+  credentialUrl?: string | null
+  credentialId?: string | null
+  skills?: string[]
+  featured?: boolean
+}
+
 export interface ContactChannel {
   name: string
   label: string

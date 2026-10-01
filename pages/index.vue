@@ -25,6 +25,7 @@
     <About />
     <TechStack />
     <ExperienceTimeline />
+    <Certificates />
 
     <section class="border-t border-neutral-200/70 dark:border-neutral-800/70" :aria-label="$t('education.sectionLabel')" data-reveal="blur">
       <div class="container-site grid gap-6 py-16 md:grid-cols-2 lg:py-20">

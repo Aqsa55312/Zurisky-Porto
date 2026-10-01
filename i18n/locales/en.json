@@ -12,7 +12,8 @@
     "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "mainNav": "Main navigation"
+    "mainNav": "Main navigation",
+    "certificates": "Certificates"
   },
   "common": {
     "downloadCV": "Download CV",
@@ -70,20 +71,52 @@
     "current": "Current"
   },
   "education": {
-    "eyebrow": "05 · Education",
-    "orgEyebrow": "06 · Organization",
+    "eyebrow": "06 · Education",
+    "orgEyebrow": "07 · Organization",
     "sectionLabel": "Education and organization",
     "notable": "Notable projects"
   },
   "contact": {
-    "eyebrow": "07 · Contact",
+    "eyebrow": "08 · Contact",
     "title": "Let's Build Something",
     "cta": "Get In Touch",
-    "placeholderNote": "Contact links are placeholders — update them in data/profile.ts."
+    "placeholderNote": "Contact links are placeholders — update them in data/profile.ts.",
+    "location": "Bandung, Indonesia · GMT+7 · Remote & onsite",
+    "response": "Usually replies within 24 hours",
+    "emailLabel": "Email",
+    "copy": "Copy",
+    "copied": "Copied",
+    "waCta": "Chat on WhatsApp",
+    "cvCta": "Download CV",
+    "formTitle": "Send a message",
+    "nameLabel": "Name",
+    "namePh": "Your name",
+    "emailPh": "you{'@'}example.com",
+    "purposeLabel": "Purpose",
+    "purposeFulltime": "Full-time",
+    "purposeFreelance": "Freelance",
+    "purposeCollab": "Collaboration",
+    "messageLabel": "Message",
+    "messagePh": "Tell me about your project, role, or idea…",
+    "errName": "Please enter your name (min. 2 characters).",
+    "errEmail": "Please enter a valid email address.",
+    "errMessage": "Please write a message of at least 10 characters.",
+    "submit": "Send Message",
+    "sending": "Sending…",
+    "successTitle": "Message sent.",
+    "successMsg": "Thanks! I usually reply within 24 hours.",
+    "failTitle": "Could not send.",
+    "failMsg": "Something went wrong. Please try again or use email instead.",
+    "retry": "Try again",
+    "sendAnother": "Send another message",
+    "orEmail": "or send via email",
+    "waPrefill": "Hi Zurisky, I saw your portfolio and would like to discuss."
   },
   "footer": {
     "rights": "All rights reserved.",
-    "navLabel": "Footer"
+    "navLabel": "Social links",
+    "quickLinks": "Quick links",
+    "backToTop": "Back to top"
   },
   "projects": {
     "eyebrow": "Portfolio",
@@ -142,5 +175,17 @@
     "placeholder": "Ask something…",
     "sendLabel": "Send message",
     "typing": "Zurisky AI is typing"
+  },
+  "cert": {
+    "eyebrow": "05 · Certificates",
+    "title": "Certificates",
+    "description": "Verified credentials and completed training programs.",
+    "pageTitle": "Certificates",
+    "all": "All certificates",
+    "verify": "Verify credential",
+    "viewFull": "View full certificate",
+    "empty": "No certificates yet.",
+    "seoTitle": "Certificates",
+    "seoDescription": "Verified certificates and credentials of Zurisky Aqsa Firmansyah."
   }
 }

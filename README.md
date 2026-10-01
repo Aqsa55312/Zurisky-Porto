@@ -30,6 +30,19 @@ Open `data/profile.ts` and replace:
 Buttons/links with placeholders are automatically hidden so production never shows broken links.
 `Contact.vue`, `Navbar.vue`, and `Footer.vue` check for `REPLACE_WITH_REAL`.
 
+## Contact form setup (Web3Forms)
+
+The contact form posts to Web3Forms (free, no backend):
+
+1. Register your email at https://web3forms.com and copy the access key.
+2. Paste it in `data/contact.ts` → `WEB3FORMS_ACCESS_KEY`.
+3. Rebuild + redeploy. Until then, the form shows a graceful error state
+   pointing visitors to email/WhatsApp instead.
+
+The form includes client-side validation, loading state, success/error
+panels, and a honeypot anti-spam field. WhatsApp deep link and its
+prefill text live in `data/contact.ts` + `contact.waPrefill` locale keys.
+
 ## Add your CV
 
 Drop the PDF at `public/cv/Zurisky-Aqsa-CV.pdf` (path configured in `data/profile.ts` → `cvPath`).

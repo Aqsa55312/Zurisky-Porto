@@ -111,17 +111,25 @@
 </template>
 
 <script setup lang="ts">
+import { certificates } from '~/data/certificates'
 import { profile } from '~/data/profile'
 
 const { t } = useI18n()
 
-const navItems = computed(() => [
-  { label: t('nav.home'), href: '/' },
-  { label: t('nav.about'), href: '/#about' },
-  { label: t('nav.projects'), href: '/projects' },
-  { label: t('nav.experience'), href: '/#experience' },
-  { label: t('nav.contact'), href: '/#contact' }
-])
+const navItems = computed(() => {
+  const items = [
+    { label: t('nav.home'), href: '/' },
+    { label: t('nav.about'), href: '/#about' },
+    { label: t('nav.projects'), href: '/projects' },
+    { label: t('nav.experience'), href: '/#experience' }
+  ]
+  // Certificates link appears only once real credentials exist.
+  if (certificates.length > 0) {
+    items.push({ label: t('nav.certificates'), href: '/certificates' })
+  }
+  items.push({ label: t('nav.contact'), href: '/#contact' })
+  return items
+})
 
 const scrolled = ref(false)
 const menuOpen = ref(false)

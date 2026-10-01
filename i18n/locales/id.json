@@ -12,7 +12,8 @@
     "contact": "Kontak",
     "openMenu": "Buka menu",
     "closeMenu": "Tutup menu",
-    "mainNav": "Navigasi utama"
+    "mainNav": "Navigasi utama",
+    "certificates": "Sertifikat"
   },
   "common": {
     "downloadCV": "Unduh CV",
@@ -70,20 +71,52 @@
     "current": "Aktif"
   },
   "education": {
-    "eyebrow": "05 · Pendidikan",
-    "orgEyebrow": "06 · Organisasi",
+    "eyebrow": "06 · Pendidikan",
+    "orgEyebrow": "07 · Organisasi",
     "sectionLabel": "Pendidikan dan organisasi",
     "notable": "Proyek penting"
   },
   "contact": {
-    "eyebrow": "07 · Kontak",
+    "eyebrow": "08 · Kontak",
     "title": "Mari Bangun Sesuatu",
     "cta": "Hubungi Saya",
-    "placeholderNote": "Tautan kontak masih placeholder — perbarui di data/profile.ts."
+    "placeholderNote": "Tautan kontak masih placeholder — perbarui di data/profile.ts.",
+    "location": "Bandung, Indonesia · GMT+7 · Remote & onsite",
+    "response": "Biasanya dibalas dalam 24 jam",
+    "emailLabel": "Email",
+    "copy": "Salin",
+    "copied": "Tersalin",
+    "waCta": "Chat via WhatsApp",
+    "cvCta": "Unduh CV",
+    "formTitle": "Kirim pesan",
+    "nameLabel": "Nama",
+    "namePh": "Nama Anda",
+    "emailPh": "anda{'@'}contoh.com",
+    "purposeLabel": "Tujuan",
+    "purposeFulltime": "Full-time",
+    "purposeFreelance": "Freelance",
+    "purposeCollab": "Kolaborasi",
+    "messageLabel": "Pesan",
+    "messagePh": "Ceritakan proyek, peran, atau ide Anda…",
+    "errName": "Mohon isi nama (min. 2 karakter).",
+    "errEmail": "Mohon isi alamat email yang valid.",
+    "errMessage": "Mohon tulis pesan minimal 10 karakter.",
+    "submit": "Kirim Pesan",
+    "sending": "Mengirim…",
+    "successTitle": "Pesan terkirim.",
+    "successMsg": "Terima kasih! Saya balas dalam 24 jam.",
+    "failTitle": "Gagal terkirim.",
+    "failMsg": "Terjadi kesalahan. Coba lagi atau pakai email.",
+    "retry": "Coba lagi",
+    "sendAnother": "Kirim pesan lain",
+    "orEmail": "atau kirim lewat email",
+    "waPrefill": "Halo Zurisky, saya lihat portofolio kamu dan ingin berdiskusi."
   },
   "footer": {
     "rights": "Hak cipta dilindungi.",
-    "navLabel": "Footer"
+    "navLabel": "Tautan sosial",
+    "quickLinks": "Tautan cepat",
+    "backToTop": "Kembali ke atas"
   },
   "projects": {
     "eyebrow": "Portofolio",
@@ -142,5 +175,17 @@
     "placeholder": "Tanya sesuatu…",
     "sendLabel": "Kirim pesan",
     "typing": "Zurisky AI sedang mengetik"
+  },
+  "cert": {
+    "eyebrow": "05 · Sertifikasi",
+    "title": "Sertifikasi",
+    "description": "Kredensial terverifikasi dan program pelatihan yang diselesaikan.",
+    "pageTitle": "Sertifikat",
+    "all": "Semua sertifikat",
+    "verify": "Verifikasi kredensial",
+    "viewFull": "Lihat sertifikat penuh",
+    "empty": "Belum ada sertifikat.",
+    "seoTitle": "Sertifikat",
+    "seoDescription": "Sertifikat dan kredensial terverifikasi milik Zurisky Aqsa Firmansyah."
   }
 }
