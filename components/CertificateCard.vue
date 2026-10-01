@@ -18,6 +18,12 @@
       <span class="absolute right-3 top-3 rounded-full bg-black/60 px-2.5 py-1 font-mono text-[11px] text-white backdrop-blur">
         {{ cert.year }}
       </span>
+      <span
+        v-if="cert.sample"
+        class="absolute left-3 top-3 rounded-full bg-amber-500/90 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-black backdrop-blur"
+      >
+        {{ $t('cert.sample') }}
+      </span>
       <span class="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all group-hover:bg-black/25 group-hover:opacity-100">
         <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-neutral-900">
           <Icon name="lucide:expand" class="h-5 w-5" aria-hidden="true" />

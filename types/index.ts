@@ -90,6 +90,8 @@ export interface Certificate {
   credentialId?: string | null
   skills?: string[]
   featured?: boolean
+  /** Dummy placeholder — shows a SAMPLE badge. Remove when real data is set. */
+  sample?: boolean
 }
 
 export interface ContactChannel {

@@ -23,7 +23,48 @@ import type { Certificate } from '~/types'
  * //   featured: true
  * // },
  */
-export const certificates: Certificate[] = []
+export const certificates: Certificate[] = [
+  // ── DUMMY DATA — replace with real credentials, then delete `sample: true` ──
+  {
+    slug: 'belajar-dasar-pemrograman-web',
+    title: 'Belajar Dasar Pemrograman Web',
+    issuer: 'Dicoding Indonesia',
+    year: '2024',
+    image: '/images/certificates/cert-dummy-1.webp',
+    imageAlt: 'Sample web programming certificate artwork',
+    credentialUrl: null,
+    credentialId: null,
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    featured: true,
+    sample: true
+  },
+  {
+    slug: 'belajar-membuat-aplikasi-flutter',
+    title: 'Belajar Membuat Aplikasi Flutter',
+    issuer: 'Dicoding Indonesia',
+    year: '2024',
+    image: '/images/certificates/cert-dummy-2.webp',
+    imageAlt: 'Sample Flutter certificate artwork',
+    credentialUrl: null,
+    credentialId: null,
+    skills: ['Flutter', 'Dart'],
+    featured: true,
+    sample: true
+  },
+  {
+    slug: 'machine-learning-foundations',
+    title: 'Machine Learning Foundations',
+    issuer: 'Coursera',
+    year: '2025',
+    image: '/images/certificates/cert-dummy-3.webp',
+    imageAlt: 'Sample machine learning certificate artwork',
+    credentialUrl: null,
+    credentialId: null,
+    skills: ['Machine Learning', 'Python'],
+    featured: true,
+    sample: true
+  }
+]
 
 export const featuredCertificates = (limit = 3): Certificate[] =>
   certificates.filter((c) => c.featured).slice(0, limit)
