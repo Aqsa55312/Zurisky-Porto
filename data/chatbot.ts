@@ -143,6 +143,14 @@ export const chatIntents: ChatIntent[] = [
     }
   },
   {
+    id: 'certificates',
+    keywords: ['sertifikat', 'certificate', 'sertifikasi', 'certification', 'lisensi', 'license', 'ibm', 'hacktiv8', 'infranexia'],
+    answer: {
+      en: 'Zurisky holds verified certifications including PT Telkom Infrastruktur Indonesia (Internship), IT - AI Agent for Programming (Hacktiv8 & IBM SkillsBuild), AI Productivity & API Integration (Google.org/Hacktiv8), and multiple IBM SkillsBuild credentials (LLMs, AI Agents, Healthcare AI). Check the Certificates page!',
+      id: 'Zurisky memiliki sertifikasi terverifikasi termasuk PT Telkom Infrastruktur Indonesia (Magang), IT - AI Agent for Programming (Hacktiv8 & IBM SkillsBuild), AI Productivity & API Integration (Google.org/Hacktiv8), serta berbagai sertifikat IBM SkillsBuild (LLM, AI Agents, Healthcare AI). Cek halaman Sertifikat!'
+    }
+  },
+  {
     id: 'thanks',
     keywords: ['terima kasih', 'thanks', 'thank', 'makasih', 'thankyou', 'oke', 'ok ', 'okay', 'sip', 'mantap', 'bagus'],
     answer: {
