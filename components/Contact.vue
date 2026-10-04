@@ -222,7 +222,7 @@
 
 <script setup lang="ts">
 import { profile } from '~/data/profile'
-import { buildWaLink, contactConfig, isFormConfigured, WEB3FORMS_ACCESS_KEY } from '~/data/contact'
+import { buildWaLink, contactConfig, FORM_ENDPOINT } from '~/data/contact'
 
 const { t, locale } = useI18n()
 const { lp } = useLocaleContent()
@@ -287,28 +287,25 @@ const onSubmit = async (): Promise<void> => {
     status.value = 'success'
     return
   }
-  if (!isFormConfigured()) {
-    status.value = 'error'
-    return
-  }
   sending.value = true
   status.value = 'idle'
   try {
-    const res = await fetch('https://api.web3forms.com/submit', {
+    const res = await fetch(FORM_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
-        access_key: WEB3FORMS_ACCESS_KEY,
         name: form.name.trim(),
         email: form.email.trim(),
-        subject: `[Portfolio] ${form.purpose} — ${form.name.trim()}`,
-        message: form.message.trim(),
-        from_name: 'Zurisky Portfolio',
-        reply_to: form.email.trim()
+        message: `[${form.purpose}] ${form.message.trim()}`,
+        _subject: `[Portfolio] ${form.purpose} — ${form.name.trim()}`,
+        _template: 'table',
+        _replyto: form.email.trim(),
+        _honey: '',
+        _captcha: 'false'
       })
     })
-    const data = (await res.json()) as { success?: boolean }
-    status.value = res.ok && data.success ? 'success' : 'error'
+    const data = (await res.json()) as { success?: string }
+    status.value = res.ok && data.success === 'true' ? 'success' : 'error'
   } catch {
     status.value = 'error'
   } finally {

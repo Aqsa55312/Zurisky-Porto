@@ -1,18 +1,21 @@
 /**
  * Contact configuration.
  *
- * FORM SETUP (Web3Forms, free, no backend needed):
- * 1. Get a free access key at https://web3forms.com (register with your email).
- * 2. Paste it below as WEB3FORMS_ACCESS_KEY.
- * 3. Rebuild + redeploy. Until then, the form shows a graceful error state
- *    pointing visitors to email/WhatsApp instead.
+ * FORM DELIVERY (FormSubmit AJAX — free, no signup, no API key):
+ * Messages POST directly to the inbox below. The FIRST submission ever
+ * triggers a one-time activation email — open it and click "Activate",
+ * afterwards every message lands straight in the inbox (check spam
+ * folder for the activation mail).
  *
- * Alternatives (require code changes in components/Contact.vue):
- * - Formspree: POST to https://formspree.io/f/{form_id}
- * - Resend: needs a Nuxt server route (server/api/contact.post.ts) to keep
- *   the API key secret — never call Resend directly from the browser.
+ * To change the destination inbox, edit FORM_INBOX below.
+ * Alternatives (need extra setup, see README):
+ * - Web3Forms: needs a free access key.
+ * - Resend: needs a Nuxt server route to keep the API key secret —
+ *   never call Resend directly from the browser.
  */
-export const WEB3FORMS_ACCESS_KEY = 'REPLACE_WITH_WEB3FORMS_KEY'
+export const FORM_INBOX = 'zurizky.ayudish7@gmail.com'
+
+export const FORM_ENDPOINT = `https://formsubmit.co/ajax/${FORM_INBOX}`
 
 export const contactConfig = {
   emailDisplay: 'zurizky.ayudish7@gmail.com',
@@ -22,9 +25,6 @@ export const contactConfig = {
   /** Digits only, no plus/spaces — for wa.me links. */
   waNumber: '6283830104314'
 } as const
-
-export const isFormConfigured = (): boolean =>
-  !WEB3FORMS_ACCESS_KEY.includes('REPLACE_WITH_')
 
 export const buildWaLink = (prefill: string): string =>
   `https://wa.me/${contactConfig.waNumber}?text=${encodeURIComponent(prefill)}`

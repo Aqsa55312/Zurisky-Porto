@@ -30,14 +30,14 @@ Open `data/profile.ts` and replace:
 Buttons/links with placeholders are automatically hidden so production never shows broken links.
 `Contact.vue`, `Navbar.vue`, and `Footer.vue` check for `REPLACE_WITH_REAL`.
 
-## Contact form setup (Web3Forms)
+## Contact form setup (FormSubmit)
 
-The contact form posts to Web3Forms (free, no backend):
+The contact form posts to FormSubmit AJAX (free, no signup, no API key).
+Messages go to the inbox in `data/contact.ts` → `FORM_INBOX`.
 
-1. Register your email at https://web3forms.com and copy the access key.
-2. Paste it in `data/contact.ts` → `WEB3FORMS_ACCESS_KEY`.
-3. Rebuild + redeploy. Until then, the form shows a graceful error state
-   pointing visitors to email/WhatsApp instead.
+Important: the FIRST submission ever triggers a one-time activation email
+to that inbox — open it and click "Activate" (check spam too). Afterwards
+every message lands straight in the inbox.
 
 The form includes client-side validation, loading state, success/error
 panels, and a honeypot anti-spam field. WhatsApp deep link and its
