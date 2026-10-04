@@ -1,5 +1,5 @@
 <template>
-  <section ref="stackSection" class="border-t border-neutral-200/70 dark:border-neutral-800/70" aria-labelledby="stack-heading" data-reveal="right">
+  <section class="border-t border-neutral-200/70 dark:border-neutral-800/70" aria-labelledby="stack-heading" data-reveal="right">
     <div class="container-site py-16 lg:py-24">
       <p class="eyebrow">{{ $t('stack.eyebrow') }}</p>
       <h2 id="stack-heading" class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">{{ $t('stack.title') }}</h2>
@@ -25,16 +25,13 @@
             </h3>
           </div>
           <ul v-if="hasLevels(cat)" class="mt-5 space-y-3.5">
-            <li v-for="(tech, ti) in cat.technologies" :key="tech">
+            <li v-for="tech in cat.technologies" :key="tech">
               <div class="flex items-baseline justify-between gap-3 text-xs">
                 <span class="font-semibold text-neutral-700 dark:text-neutral-300">{{ tech }}</span>
                 <span class="font-bold tabular-nums text-indigo-600 dark:text-indigo-400">{{ levelOf(cat, tech) }}%</span>
               </div>
               <div class="skill-track mt-1.5" role="img" :aria-label="`${tech}: ${levelOf(cat, tech)}%`">
-                <div
-                  class="skill-fill"
-                  :style="{ width: barsOn ? `${levelOf(cat, tech)}%` : '0%', transitionDelay: `${ti * 70}ms` }"
-                />
+                <div class="skill-fill" :style="{ width: `${levelOf(cat, tech)}%` }" />
               </div>
             </li>
           </ul>
@@ -78,32 +75,5 @@ const levelOf = (cat: SkillCategory, tech: string): number => cat.levels?.[tech]
 
 const hasLevels = (cat: SkillCategory): boolean =>
   cat.technologies.some((t) => (cat.levels?.[t] ?? 0) > 0)
-
-// Animate bars when the section scrolls into view (once).
-const barsOn = ref(false)
-const stackSection = ref<HTMLElement | null>(null)
-
-onMounted(() => {
-  const el = stackSection.value
-  if (!el || typeof IntersectionObserver === 'undefined') {
-    barsOn.value = true
-    return
-  }
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    barsOn.value = true
-    return
-  }
-  const io = new IntersectionObserver(
-    (entries) => {
-      if (entries[0]?.isIntersecting) {
-        barsOn.value = true
-        io.disconnect()
-      }
-    },
-    { threshold: 0.2 }
-  )
-  io.observe(el)
-  onUnmounted(() => io.disconnect())
-})
 </script>
 

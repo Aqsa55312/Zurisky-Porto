@@ -17,7 +17,7 @@
       <div class="hero-orb hero-orb-3" />
 
       <!-- Floating frosted-glass shapes -->
-      <div class="glass-shape glass-shape-1 hidden sm:block" />
+      <div class="glass-shape glass-shape-1" />
       <div class="glass-shape glass-shape-2 hidden sm:block" />
 
       <!-- Sparse bokeh light dots -->

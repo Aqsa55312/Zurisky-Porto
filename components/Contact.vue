@@ -5,9 +5,9 @@
         <div class="relative overflow-hidden rounded-[calc(1.5rem-1px)] border border-transparent bg-white/90 p-7 backdrop-blur sm:p-10 lg:p-12 dark:bg-neutral-900/80">
           <div class="pointer-events-none absolute -top-28 left-1/2 h-56 w-[40rem] max-w-full -translate-x-1/2 rounded-full bg-violet-500/15 blur-3xl" aria-hidden="true" />
 
-          <div class="relative grid gap-10 lg:grid-cols-2 lg:gap-14">
+          <div class="relative grid gap-10 min-w-0 lg:grid-cols-2 lg:gap-14">
             <!-- Left: info + direct channels -->
-            <div>
+            <div class="min-w-0">
               <p class="eyebrow">{{ $t('contact.eyebrow') }}</p>
               <h2 id="contact-heading" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
                 {{ $t('contact.title') }}
@@ -105,7 +105,7 @@
             </div>
 
             <!-- Right: form -->
-            <div class="rounded-2xl border border-neutral-200/80 bg-white/70 p-6 sm:p-7 dark:border-neutral-800 dark:bg-neutral-900/60">
+            <div class="min-w-0 rounded-2xl border border-neutral-200/80 bg-white/70 p-6 sm:p-7 dark:border-neutral-800 dark:bg-neutral-900/60">
               <h3 class="font-display text-xl font-bold tracking-tight">{{ $t('contact.formTitle') }}</h3>
 
               <div v-if="status === 'success'" class="mt-5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-5 text-center" role="status">

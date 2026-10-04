@@ -175,7 +175,7 @@ onMounted(() => {
   const seed = (): void => {
     const area = W * H
     let n = Math.floor(area / 18000)
-    n = Math.max(20, Math.min(coarse ? 28 : 90, n))
+    n = Math.max(20, Math.min(coarse ? 20 : 90, n))
     parts = Array.from({ length: n }, (_, i) => ({
       x: Math.random() * W,
       y: Math.random() * H,

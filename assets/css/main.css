@@ -757,9 +757,11 @@ body {
   animation: float-slower 7s ease-in-out infinite;
 }
 
-/* Prevent horizontal overflow from slide-in reveals */
+/* Prevent horizontal overflow from slide-in reveals
+   (`hidden` fallback first for browsers without `clip` support). */
 html,
 body {
+  overflow-x: hidden;
   overflow-x: clip;
 }
 
@@ -784,7 +786,9 @@ body {
   filter: none;
 }
 
-/* ── Skill proficiency bars ── */
+/* ── Skill proficiency bars ──
+   Width is always correct (no-JS safe); the fill animation is
+   scroll-driven where supported, static otherwise. */
 .skill-track {
   height: 0.45rem;
   overflow: hidden;
@@ -799,7 +803,34 @@ body {
   border-radius: 9999px;
   background: linear-gradient(90deg, #7c3aed, #3b82f6 55%, #10b981);
   box-shadow: 0 0 12px -2px rgb(124 58 237 / 0.55);
-  transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@supports (animation-timeline: view()) {
+  .skill-fill {
+    transform: scaleX(0);
+    animation: skill-fill-in 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-timeline: view();
+    animation-range: entry 15% entry 55%;
+  }
+  @keyframes skill-fill-in {
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* ── Mobile performance: freeze large-area ambient animations ──
+   Small elements (float badges, marquee, shimmer, caret) keep animating. */
+@media (max-width: 640px) {
+  .hero-aurora,
+  .hero-orb,
+  .bokeh-field,
+  .glass-shape,
+  .hero-card-aura,
+  .page-backdrop .backdrop-blob {
+    animation: none !important;
+  }
 }
 
 /* ═══════════════════════════════════════════════

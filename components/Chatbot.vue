@@ -21,7 +21,7 @@
     <Transition name="chat-pop">
       <section
         v-if="open"
-        class="fixed bottom-24 left-3 right-3 z-50 flex h-[540px] max-h-[74dvh] flex-col overflow-hidden rounded-3xl border border-white/50 bg-white/85 shadow-2xl backdrop-blur-xl sm:left-auto sm:right-6 sm:w-[calc(100vw-2rem)] sm:max-w-sm dark:border-white/10 dark:bg-neutral-900/85"
+        class="fixed bottom-24 left-3 right-3 z-50 flex h-[540px] max-h-[74dvh] flex-col overflow-hidden rounded-3xl border border-white/50 bg-white/85 shadow-2xl backdrop-blur-xl sm:left-auto sm:right-6 sm:w-full sm:max-w-sm dark:border-white/10 dark:bg-neutral-900/85"
         role="dialog"
         :aria-label="$t('chat.title')"
       >
